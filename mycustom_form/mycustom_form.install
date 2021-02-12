@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function mycustom_form_uninstall(){
+    // Remove the previously set Site API Key configuration
+    \Drupal::configFactory()->getEditable('system.site')->delete();
+}

@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Contains mycustom_form.module.
+ */
+
+/**
+ * Implements hook_form_alter
+ */ 
+function mycustom_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if($form_id == 'system_site_information_settings') {
+	  $siteapikey = \Drupal::config ('system.site')->get('siteapikey');
+	  if($siteapikey) {
+		  $form['actions']['submit']['#value'] = 'Update Configuration';		  
+	  }
+	}
+}

@@ -1,0 +1,5 @@
+name: My Custom Form
+type: module
+description: Create custom form to add new field in "Site Information" form.
+core: 8.x
+package: Custom form

@@ -1,0 +1,5 @@
+services:
+  mycustom_form.route_subscriber:
+    class: Drupal\mycustom_form\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
